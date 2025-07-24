@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Promoting Health Equity Module</title>
-   <div class="container">
-    }
-    <nav class="navbar">
-      <img src="logo.png" alt="Logo" class="logo">
-      <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="Begin Module.html">Begin Module</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+  <title>Begin Module | Promoting Health Equity</title>
   <style>
-      <!-- Navigation -->
-      /* Navigation styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Navigation styles */
     .navbar {
       background-color: white;
       padding: 20px 40px;
@@ -46,71 +46,190 @@
     .nav-links a:hover {
       color: #7030A0;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    /* Module content styles */
+    .module-intro {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .top-half {
-      background-color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .top-half h1 {
+    .module-intro h1 {
       font-size: 2.5rem;
       color: #7030A0;
       margin-bottom: 20px;
     }
 
-    .top-half p {
+    .module-intro p {
       font-size: 1.2rem;
       color: #333;
-      max-width: 800px;
-      margin: 0 auto;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    .bottom-half {
+    .module-container {
       background-color: #7030A0;
       padding: 40px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-grow: 1;
+      min-height: 70vh;
     }
 
+    iframe {
+      width: 980px;
+      height: 658px;
+      border: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      max-width: 100%;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-column h3 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .footer-column p, .footer-column a {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      iframe {
+        height: 550px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .module-intro {
+        padding: 40px 20px;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="top-half">  
-      <p style="text-align: left;">
-      <h1>Promoting Health Equity</h1>
-      <p style="text-align: left;">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <!-- Update the src to your actual logo path -->
+      <img src="images/logo.png" alt="Health Equity Logo" class="logo">
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="module.html">Begin Module</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Module Introduction -->
+    <section class="module-intro">
+      <h1>Interactive Learning Module</h1>
       <p>
         Explore this interactive learning module designed to foster inclusive, patient-centered care practices. 
         Learn how healthcare professionals can identify and reduce disparities to promote equitable health outcomes 
         for all individuals and communities.
       </p>
-    </div>
-    <div class="bottom-half">
+    </section>
+
+    <!-- Module Container -->
+    <section class="module-container">
       <iframe 
         src="https://s3.us-west-2.amazonaws.com/collaborate.uw.edu/NEPQR_Modules/Promoting_Health_Equity_Module_20230328/story.html" 
         allowfullscreen>
       </iframe>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>We are a collaborative initiative dedicated to advancing health equity through education, research, and community engagement.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="home.html">Home</a>
+          <a href="module.html">Begin Module</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Resources</a>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Information</h3>
+          <p>Email: info@healthequity.org</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Health St, Suite 100<br>City, State 12345</p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2023 Promoting Health Equity Initiative. All rights reserved.
+      </div>
+    </footer>
   </div>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>
 </html>
