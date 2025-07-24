@@ -96,7 +96,7 @@
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.6;
-      text-align: center;
+      text-align: left;
     }
 
     .module-container {
@@ -116,19 +116,26 @@
       max-width: 100%;
     }
 
-    /* Footer styles */
+    /* Fixed Footer styles */
     .footer {
       background-color: #333;
       color: white;
-      padding: 40px 20px;
+      padding: 40px 0;
+      width: 100%;
+      margin-top: auto;
     }
 
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
+      padding: 0 20px;
+    }
+
+    .footer-column {
+      padding: 0 15px;
     }
 
     .footer-column h3 {
@@ -155,17 +162,7 @@
       background-color: #222;
       color: #aaa;
       font-size: 0.9rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .social-links a {
-      color: white;
-      font-size: 1.5rem;
+      margin-top: 30px;
     }
 
     @media (max-width: 1024px) {
@@ -195,6 +192,10 @@
         grid-template-columns: 1fr;
       }
 
+      .footer-column {
+        margin-bottom: 20px;
+      }
+
       iframe {
         height: 400px;
       }
@@ -213,20 +214,18 @@
       </div>
     </nav>
 
-    <!-- Home Page Content (shown on home.html) -->
+    <!-- Home Page Content -->
     <section class="research-overview content-section">
       <h1>Our Mission</h1>
       <p>
         To empower healthcare professionals with the knowledge and tools needed to identify and reduce disparities, 
         ultimately promoting equitable health outcomes through education, research, and community partnership.
       </p>
-  
     </section>
 
     <section class="mission-statement">
-       <p style="text-align: left;">
       <h2>Promoting Health Equity</h2> 
-      <p style="text-align: left;">
+      <p>
         Our research focuses on identifying and addressing health disparities to promote equitable health outcomes 
         for all individuals and communities. Through interdisciplinary collaboration and community engagement, 
         we develop innovative approaches to reduce barriers to care and improve health equity.
@@ -235,15 +234,13 @@
         to implement evidence-based strategies that address the root causes of health inequities.
       </p>
     </section>
-     <p style="text-align: left;">
 
-    <!-- Footer -->
+    <!-- Fixed Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>About Us</h3>
           <p>We are a collaborative initiative dedicated to advancing health equity through education, research, and community engagement.</p>
-          </div>
         </div>
         <div class="footer-column">
           <h3>Quick Links</h3>
@@ -262,7 +259,7 @@
     </footer>
   </div>
 
-  <!-- Font Awesome for social icons (add this in head for production) -->
+  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>
 </html>
